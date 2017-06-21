@@ -11,7 +11,6 @@ Whether you have five or five thousand servers, Chef lets you manage them all by
 * [ChefServer.zip](ChefServer.zip) - The comm plan (if needed) that has all the cool scripts and email format and such. 
 
 # Installation
-Details of the installation go here. 
 
 ## Chef Recipe or Chef Custom Event Handler
 1. Edit the default Recipe of the cookbook/cookbooks or the Custom Event Handler cookbook and add the following Ruby code:
