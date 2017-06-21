@@ -23,32 +23,15 @@ Details of the installation go here.
 * headers('Content-Type' => 'application/json')
 * end
 *
-* If the code is executed in a Recipe, access to run variables is limited to the following standard environment variables.  If the an custom Event Handler is used, the run variables can be extended.  See Chef documentation on custom Event Handlers. [Chef Event Handler Help Docs](https://docs.chef.io/handlers.html)
-2. The attached delivery.rb file is an example of the configured settings pointing to a xMatters instance.
-3. The following are the ruby lines in the file:
-      * notifier['enable']
-      * notifier['user_webhook_url']
-4. The following is a sample notification message body:
-      * {
-      *  "automate_fqdn":"automate.test",
-      *  "failure_snippet":"Chef client run failure on [chef-server.test] centos-runner-1.test : https://failure_url \n Failure Reason\n",
-      * "exception_backtrace":"A long string with the backtrace that contains the error and \n",
-      *  "exception_title":"Error Resolving Cookbooks for Run List:",
-      *  "exception_message":"412 \"Precondition Failed\"",
-      *  "automate_failure_url":"automate.test/long/url/that-takes-you-to-run-failure-page",
-      *  "timestamp_utc":"2017-06-19T19:58:35.000000Z",
-      *  "start_time_utc":"2017-06-19T19:58:35.000000Z",
-      *  "end_time_utc":"2017-06-19T19:58:35.000000Z",
-      *  "node_name":"centos-runner-1.test",
-      *  "type":"node_failure"
-      *}
-5. Restart the Chef Automate server after saving the delivery.rb file.
-
+* If the code is executed in a Recipe, access to run variables is limited to the following Automatic (Ohai) attributes. [Chef Cookbook/Recipe Automatic Attributes](https://docs.chef.io/attributes.html)  
+* If a custom Event Handler is used, the run variables can be extended.  See Chef documentation on custom Event Handlers. [Chef Event Handler Help Docs](https://docs.chef.io/handlers.html)
+* Additional methods to access additional Attributes outside of an Event Handler probably exist.  My novice experience on Chef led me to the above.
+* When dynamic information is sent through via the message value, these values can effect how xMatters processes the information.  For example, depending on the cookbook that executes the above code, different groups could be targeted.  This allows customers to contact different groups/teams depending on the infrastructure layer that failed. 
 
 
 ## xMatters set up
 1. Import the Communication Plan (see files).  If this step is done you can skip steps 2.
-2. Create (In|Out)bound integration and add the code from the Chef-Generic-Webhook_IB.js file.
+2. Create (In|Out)bound integration and add the code from the ChefServer.js file.
 3. Configure the xMatters Endpoints. [xMatters Endpoints](https://help.xmatters.com/OnDemand/xmodwelcome/integrationbuilder/configure-endpoints.htm)
 4. Create a chef group in xMatters and add your self to the group. [xMatters Groups](https://help.xmatters.com/OnDemand/groups/groups.htm).  The name of the chef group can be changed in the Inbound IB script.
   
