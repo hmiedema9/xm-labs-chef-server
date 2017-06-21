@@ -2,7 +2,7 @@
 Whether you have five or five thousand servers, Chef lets you manage them all by turning infrastructure into code. Infrastructure described as code is flexible, versionable, human-readable, and testable. Check out the sweet video [here](media/mysweetvideo.mov). 
 
 # Pre-Requisites
-* Chef Recipe or Chef custom Event Handler.  The   See the following Chef documentation for instructions on how to configure a custom Event Handler.  [Chef Event Handler Help Docs](https://docs.chef.io/handlers.html)  
+* Chef Recipe or Chef custom Event Handler.  See the following Chef documentation for instructions on how to configure a custom Event Handler.  [Chef Event Handler Help Docs](https://docs.chef.io/handlers.html)  
 * xMatters account - If you don't have one, [get one](https://www.xmatters.com)!
 * xMatters ChefServer Communication Plan (see zip file in above files) imported into xMatters or created in xMatters.
 
