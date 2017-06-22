@@ -37,7 +37,7 @@ end
 
 ## xMatters set up
 1. Import the Communication Plan (see files).  If this step is done you can skip steps 2.
-2. Create (In|Out)bound integration and add the code from the ChefServer.js file.
+2. Create (In|Out)bound integration and add the code from the Chef-Server.js file.
 3. Configure the xMatters Endpoints. [xMatters Endpoints](https://help.xmatters.com/OnDemand/xmodwelcome/integrationbuilder/configure-endpoints.htm)
 4. Create a chef group in xMatters and add your self to the group. [xMatters Groups](https://help.xmatters.com/OnDemand/groups/groups.htm).  The name of the chef group can be changed in the Inbound IB script.
   
@@ -45,7 +45,7 @@ end
 1. Run a Cookbook in Chef that will force the run to fail.
 2. A message should come through on your devices.  Which ever devices you have configured in xMatters.
 <kbd>
-<img src="media/Picture1.png">
+<img src="media/devicemessage.png">
 </kbd>
 
 # Troubleshooting
