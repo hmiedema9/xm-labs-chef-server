@@ -14,13 +14,21 @@ Whether you have five or five thousand servers, Chef lets you manage them all by
 
 ## Chef Recipe or Chef Custom Event Handler
 1. Edit the default Recipe of the cookbook/cookbooks or the Custom Event Handler cookbook and add the following Ruby code:
-* http_request 'posting data' do
-* action :post
-* url 'https://[xmatters instance]/api/integration/1/functions/7ae4d0e1-10bd-4c63-bf60-9a862a0abf18/triggers'
-* message ({:host => node['hostname'], :ip => node['ipaddress'], :cookbook => node['cookbook']['name'], :status => run_status}.to_json)
-* headers('Content-Type' => 'application/json')
-* end
-*
+```
+if File::exists?('/tmp')
+	puts "Error"
+	http_request 'posting data' do
+ 		action :post
+		url 'https://[xmatters instance]/api/integration/1/functions/7ae4d0e1-10bd-4c63-bf60-9a862a0abf18/triggers'
+ 		# message ({:some => 'data'}.to_json)
+ 		message ({:host => node['hostname'], :ip => node['ipaddress'], :cookbook => 'learn_chef_apache2', :status => 'Error with tmp file'}.to_json)
+		headers('Content-Type' => 'application/json')
+	end
+	file '/tmp'
+else
+	puts "..."
+end
+```
 * If the code is executed in a Recipe, access to run variables is limited to the following Automatic (Ohai) attributes. [Chef Cookbook/Recipe Automatic Attributes](https://docs.chef.io/attributes.html)  
 * If a custom Event Handler is used, the run variables can be extended.  See Chef documentation on custom Event Handlers. [Chef Event Handler Help Docs](https://docs.chef.io/handlers.html)
 * Additional methods to access additional Attributes outside of an Event Handler probably exist.  My novice experience on Chef led me to the above.
