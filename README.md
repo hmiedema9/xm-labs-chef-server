@@ -12,7 +12,7 @@ Whether you have five or five thousand servers, Chef lets you manage them all by
 ## xMatters set up
 1. Import the [ChefServer.zip](ChefServer.zip) Communication Plan.
 3. Navigate to the Integration Builder tab and click the `Inbound from Chef Recipe` link. Copy the URL at the bottom and set aside.
-4. Create a group in xMatters and add the appropriate users to the group. [xMatters Groups](https://help.xmatters.com/OnDemand/groups/groups.htm). The name of the group is referenced in the inbound integration script with these lines of code:
+4. Create a group in xMatters and add the appropriate users to the group. For help, check out the [xMatters Groups](https://help.xmatters.com/OnDemand/groups/groups.htm) help page. The name of the group is referenced in the inbound integration script with these lines of code:
 ```javascript
 // Define recipients
 var recipients = [];
