@@ -1,6 +1,15 @@
 # Chef Server
 Whether you have five or five thousand servers, Chef lets you manage them all by turning infrastructure into code. Infrastructure described as code is flexible, versionable, human-readable, and testable. This guide instructs you how to implement an integration between xMatters and Chef Server at the Recipe level.
 
+---------
+
+<kbd>
+  <img src="https://github.com/xmatters/xMatters-Labs/raw/master/media/disclaimer.png">
+</kbd>
+
+---------
+
+
 # Pre-Requisites
 * Chef Recipe or Chef custom Event Handler.  See the following Chef documentation for instructions on how to configure a custom Event Handler.  [Chef Event Handler Help Docs](https://docs.chef.io/handlers.html)  
 * xMatters account - If you don't have one, [get one](https://www.xmatters.com)!
