@@ -4,7 +4,9 @@ Whether you have five or five thousand servers, Chef lets you manage them all by
 ---------
 
 <kbd>
+	<a href="https://support.xmatters.com/hc/en-us/community/topics">
   <img src="https://github.com/xmatters/xMatters-Labs/raw/master/media/disclaimer.png">
+	</a>
 </kbd>
 
 ---------
@@ -19,7 +21,7 @@ Whether you have five or five thousand servers, Chef lets you manage them all by
 
 # Installation
 ## xMatters set up
-1. Import the [ChefServer.zip](ChefServer.zip) Communication Plan.
+1. Import the [ChefServer.zip](ChefServer.zip) Workflow.
 3. Navigate to the Integration Builder tab and click the `Inbound from Chef Recipe` link. Copy the URL at the bottom and set aside.
 4. Create a group in xMatters and add the appropriate users to the group. For help, check out the [xMatters Groups](https://help.xmatters.com/OnDemand/groups/groups.htm) help page. The name of the group is referenced in the inbound integration script with these lines of code:
 ```javascript
@@ -64,5 +66,4 @@ Where `XMATTERS_INBOUND_INTEGRATION_URL_HERE` is the url for the `Inbound from C
 
 # Troubleshooting
 View the Activity Stream in the inbound integration in xMatters to determine issues with Chef payload or connectivity.
-
 
